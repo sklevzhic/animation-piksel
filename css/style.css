@@ -111,6 +111,14 @@ img.canvasimg {
     position: relative;
 }
 
+.fps {
+    background: #A4C954;
+    padding: 17px;
+    margin-top: 9px;
+    margin-left: 14px;
+    border: 1px solid;
+}
+
 .frames__wrapper::-webkit-scrollbar {
     width: 16px;
   }
@@ -165,7 +173,6 @@ input#paint-bucket, input#choose-color, input#move, input#transform {
 
 
 .slider {
-
   width: 10rem;
   height: .25rem;
   outline: none;
@@ -173,7 +180,6 @@ input#paint-bucket, input#choose-color, input#move, input#transform {
 }
   
 .slider::-webkit-slider-thumb {
-
     width: 1.5rem;
     height: 1.5rem;
     background-color: red;

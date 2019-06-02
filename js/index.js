@@ -121,7 +121,7 @@ function findxy(res, e) {
 function previewGif() {
     let count = 0;
 
-    setInterval(() => {
+    let tempInterval = setInterval(() => {
         if (count + 1 < frames.length) {
             count += 1;
           } else {
@@ -129,9 +129,25 @@ function previewGif() {
           }
             $('.preview__gif').html(`<img class = "preview__gif--item" src = "${frames[count]}">`)
       }, 1000 / fps);
+      $('.2fps').click(function() {
+        clearInterval(tempInterval);
+        fps = 2;
+        previewGif()
+      })
+      
+      $('.4fps').click(function() {
+        fps = 4;
+        previewGif()
+      })
+      
+      $('.8fps').click(function() {
+        fps = 8;
+        previewGif()
+      })
 }    
-
 previewGif()
+
+
 
 
 $('.frames').on('click', '.frames__button--delete', deleteFrames);
@@ -192,6 +208,6 @@ function toggleFullscreen(elem) {
     toggleFullscreen(this);
   });
   
-  
+
 
 
