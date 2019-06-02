@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodeJam-dom Pallete</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body onload="init()">
+    <header class="header">
+        <button class="header__menu header__menu--left"><i class="fas fa-bars"></i></button>
+        <h1 class="header__name">CodeJam - Animation Player</h1>
+        <button class="header__menu header__menu--right"><i class="fas fa-ellipsis-v"></i></button>
+    </header>
+    <main class="main">
+
+        <section class="workspace">
+            <div class="frames__wrapper">
+                <ul class="frames">
+
+                </ul>
+                <input type="button" value="Add new frame" id="frames__create">
+            </div>
+            <canvas id="can" width="500" height="500"></canvas>
+            <div class="preview">
+                <div class="preview__gif"></div>
+                <!-- <input type="button" value="8fps">
+                <input type="button" value="12fps">
+                <input type="button" value="25fps"> -->
+            </div>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
