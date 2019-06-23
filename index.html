@@ -32,10 +32,14 @@
             </div>
             <canvas id="can" width="500" height="500"></canvas>
             <div class="preview">
-                <div class="preview__gif"></div>
-                    <input type="button" class="fps 2fps" value="2 FPS">
-                    <input type="button" class="fps 4fps" value="4 FPS">
-                    <input type="button" class="fps 8fps" value="8 FPS">
+                <div class="preview__inner">
+                    <div class="preview__gif"></div>
+                    <div class="preview__control-panel">
+                        <input type="range" id="fps" name="fps" class="fps" min="1" max="24" value="1" step="1">
+                        <label class="fps-label" for="fps">1 FPS</label>
+                        <button class="preview__fullscreen"><img src="./assets/img/fullscreen.svg"></button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

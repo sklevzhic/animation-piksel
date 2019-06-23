@@ -118,9 +118,9 @@ function findxy(res, e) {
     }
 }
 
+
 function previewGif() {
     let count = 0;
-
     let tempInterval = setInterval(() => {
         if (count + 1 < frames.length) {
             count += 1;
@@ -129,23 +129,13 @@ function previewGif() {
           }
             $('.preview__gif').html(`<img class = "preview__gif--item" src = "${frames[count]}">`)
       }, 1000 / fps);
-      $('.2fps').click(function() {
-        clearInterval(tempInterval);
-        fps = 2;
+
+      $("#fps").change(function(){
+        clearInterval(tempInterval)
+        fps = $(this).val();
+        $(this).next().text(`${fps} FPS`);
         previewGif()
-      })
-      
-      $('.4fps').click(function() {
-        clearInterval(tempInterval);
-        fps = 4;
-        previewGif()
-      })
-      
-      $('.8fps').click(function() {
-        clearInterval(tempInterval);
-        fps = 8;
-        previewGif()
-      })
+      });
 }    
 previewGif()
 
@@ -178,6 +168,7 @@ function duplicateFrames() {
     rebuild();
 }
 
+let preview = document.querySelector('.preview');
 
 function toggleFullscreen(elem) {
     elem = elem || document.documentElement;
@@ -206,6 +197,6 @@ function toggleFullscreen(elem) {
   }
   
   
-  $('.preview__gif').click(function() {
-    toggleFullscreen(this);
+  $('.preview__fullscreen').click(function() {
+    toggleFullscreen(preview);
   });
